@@ -1,11 +1,10 @@
-import { Button, Container, Grid, Paper, styled, Typography } from '@mui/material'
+import { Button, Grid, Paper, styled, Typography } from '@mui/material'
 import { Box, Stack } from '@mui/system'
 import { useDispatch } from 'react-redux'
-import { deleteEmploye, payEmploye } from '../features/employes/employeSlice'
+import { payEmploye } from '../features/employes/employeSlice'
 import React from 'react'
 import Avatar from './Avatar'
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 
 

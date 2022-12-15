@@ -43,7 +43,7 @@ const payEmploye = async (employeId, token) => {
 
 // update an employe
 const updateAllEmployes = async (newemployes, token) => {
-  
+
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ const updateAllEmployes = async (newemployes, token) => {
 
 // get an employe
 const getEmploye = async (employeId, token) => {
-  
+
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -101,9 +101,9 @@ const employeService = {
   createEmploye,
   getEmployes,
   getEmploye,
-  deleteEmploye,
   updateEmploye,
   updateAllEmployes,
+  deleteEmploye,
   payEmploye,
 }
 

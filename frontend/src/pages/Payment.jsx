@@ -16,9 +16,6 @@ function Payment() {
 
     const params = useParams()
     const id = params.id
-    console.log(id)
-
-
 
     const navigate = useNavigate()
     const dispatch = useDispatch()

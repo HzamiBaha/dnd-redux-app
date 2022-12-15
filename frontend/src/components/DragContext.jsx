@@ -5,7 +5,6 @@ import {
     GridDropZone,
     GridItem,
     swap,
-    swapDept,
     move
 } from "react-grid-drag";
 

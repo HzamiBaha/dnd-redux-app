@@ -12,10 +12,10 @@ function EmployeItem({ employe }) {
 
 
   return (
-    <div className='employe' onClick={() => console.log("clicked", employe.name)}>
+    <div className='employe'>
       <Avatar name={employe.name} lastname={employe.lastname} />
       <div className='informations'>
-        <h4 className='employe-name'>{employe.name} {employe.name}</h4>
+        <h4 className='employe-name'>{employe.name} {employe.lastname}</h4>
         <h5 className='employe-function'>{employe.profession} {employe.grad}</h5>
       </div>
 
@@ -30,17 +30,6 @@ function EmployeItem({ employe }) {
         </button>
       </Link>
 
-
-
-
-      {/** 
-      *       <button onClick={() => dispatch(deleteEmploye(employe._id))} className='close'>
-        X
-      </button>
-      * 
-       * onClick={() => dispatch(payEmploye({ id: employe._id }))}
-       * <div>{new Date(employe.createdAt).toLocaleString('en-US')}</div>
-       * */}
     </div>
   )
 }

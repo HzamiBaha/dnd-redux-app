@@ -6,7 +6,7 @@ import Modal from '@mui/material/Modal';
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createEmploye } from '../features/employes/employeSlice'
-import { textAlign } from '@mui/system';
+
 
 const style = {
   position: 'absolute',

@@ -27,14 +27,14 @@ export const createEmploye = createAsyncThunk(
     }
   }
 )
- 
-// pay an employe
-export const payEmploye = createAsyncThunk(
-  'employes/pay',
-  async (employeId, thunkAPI) => {
+
+// Get user employes
+export const getEmployes = createAsyncThunk(
+  'employes/getAll',
+  async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token
-      return await employeService.payEmploye(employeId, token)
+      return await employeService.getEmployes(token)
     } catch (error) {
       const message =
         (error.response &&
@@ -102,13 +102,13 @@ export const updateAllEmployes = createAsyncThunk(
   }
 )
 
-// Get user employes
-export const getEmployes = createAsyncThunk(
-  'employes/getAll',
-  async (_, thunkAPI) => {
+// pay an employe
+export const payEmploye = createAsyncThunk(
+  'employes/pay',
+  async (employeId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token
-      return await employeService.getEmployes(token)
+      return await employeService.payEmploye(employeId, token)
     } catch (error) {
       const message =
         (error.response &&
@@ -120,6 +120,7 @@ export const getEmployes = createAsyncThunk(
     }
   }
 )
+
 
 // Delete user employe
 export const deleteEmploye = createAsyncThunk(
